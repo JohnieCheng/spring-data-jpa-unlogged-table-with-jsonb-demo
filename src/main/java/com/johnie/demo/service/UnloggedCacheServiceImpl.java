@@ -1,7 +1,7 @@
 package com.johnie.demo.service;
 
-import com.johnie.demo.UnloggedCache;
-import com.johnie.demo.UnloggedCacheSpecification;
+import com.johnie.demo.entity.UnloggedCache;
+import com.johnie.demo.specification.UnloggedCacheSpecification;
 import com.johnie.demo.repository.UnloggedCacheRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -36,11 +36,6 @@ public class UnloggedCacheServiceImpl implements UnloggedCacheService {
     }
 
     @Override
-    public List<UnloggedCache> findByAttributeWithFunction(String key, String value) {
-        return unloggedCacheRepository.findByAttributeWithFunction(key, value);
-    }
-
-    @Override
     public List<UnloggedCache> findByAttributeWithJsonbOperators(String key, String value) {
         return unloggedCacheRepository.findByAttributeWithJsonbOperators(key, value);
     }
@@ -48,6 +43,11 @@ public class UnloggedCacheServiceImpl implements UnloggedCacheService {
     @Override
     public List<UnloggedCache> findByNestedAttributeWithJsonbOperators(String key1, String key2, String value) {
         return unloggedCacheRepository.findByNestedAttributeWithJsonbOperators(key1, key2, value);
+    }
+
+    @Override
+    public List<UnloggedCache> findByAttributeWithFunction(String key, String value) {
+        return unloggedCacheRepository.findByAttributeWithFunction(key, value);
     }
 
     @Override

@@ -1,5 +1,6 @@
-package com.johnie.demo;
+package com.johnie.demo.specification;
 
+import com.johnie.demo.entity.UnloggedCache;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;

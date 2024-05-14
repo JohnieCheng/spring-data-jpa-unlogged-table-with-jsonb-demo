@@ -1,5 +1,6 @@
 package com.johnie.demo;
 
+import com.johnie.demo.entity.UnloggedCache;
 import com.johnie.demo.service.UnloggedCacheService;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,6 +1,6 @@
 package com.johnie.demo.service;
 
-import com.johnie.demo.UnloggedCache;
+import com.johnie.demo.entity.UnloggedCache;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,11 +18,11 @@ public interface UnloggedCacheService {
 
     Optional<UnloggedCache> findByKey(String key);
 
-    List<UnloggedCache> findByAttributeWithFunction(String key, String value);
-
     List<UnloggedCache> findByAttributeWithJsonbOperators(String key, String value);
 
     List<UnloggedCache> findByNestedAttributeWithJsonbOperators(String key1, String key2, String value);
+
+    List<UnloggedCache> findByAttributeWithFunction(String key, String value);
 
     List<UnloggedCache> findByNestedAttributeWithFunction(String key1, String key2, String value);
 
